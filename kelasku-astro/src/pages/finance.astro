@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Laporan Kas - KelasKu" description="Upload dan lihat laporan keuangan kelas.">
+    <section class="container">
+        <h2>Laporan Kas</h2>
+        <p>Upload file untuk melacak pengeluaran kelas:</p>
+        <form id="financeForm">
+            <input type="file" id="financeFile" accept=".csv,.xlsx,.xls,.pdf,.jpg,.png" required>
+            <button type="submit">Upload File</button>
+        </form>
+        
+        <div id="financeRecords">
+            <h3>Riwayat Pengeluaran:</h3>
+            <ul id="financeItems"></ul>
+        </div>
+    </section>
+</BaseLayout>

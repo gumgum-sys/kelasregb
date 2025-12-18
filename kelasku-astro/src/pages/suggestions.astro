@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Kritik & Saran - KelasKu" description="Kirimkan kritik dan saran secara anonim untuk perbaikan kelas.">
+    <section class="container">
+        <h2>Kritik & Saran</h2>
+        <p>Tulis saran atau kritik kamu secara anonim:</p>
+        <form id="suggestionForm">
+            <textarea id="suggestionText" placeholder="Tulis saran atau kritikmu disini..." rows="4"></textarea>
+            <button type="submit">Kirim</button>
+        </form>
+        <div id="suggestionsList"></div>
+    </section>
+</BaseLayout>

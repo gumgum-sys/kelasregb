@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Tugas - KelasKu" description="Lihat dan tambahkan tugas kelas.">
+    <section class="container">
+        <h2>Tugas</h2>
+        <p>Tambahkan tugas baru:</p>
+        <form id="assignmentForm">
+            <input type="text" id="assignmentName" placeholder="Nama Tugas" required>
+            <input type="date" id="assignmentDeadline" required>
+            <button type="submit">Tambah Tugas</button>
+        </form>
+        
+        <div id="assignmentsList">
+            <h3>Daftar Tugas:</h3>
+            <ul id="assignmentItems"></ul>
+        </div>
+    </section>
+</BaseLayout>
