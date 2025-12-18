@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Astro Site to GitHub Pages
 
 on:
   push:
@@ -14,23 +14,26 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup Node.js (optional, if needed for build steps)
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: '18'
+        cache: 'npm'
 
-    - name: Install dependencies (if any)
-      run: npm ci
-      continue-on-error: true
+    - name: Install dependencies
+      run: |
+        cd kelasku-astro
+        npm ci
 
-    - name: Build project (if needed)
-      run: npm run build
-      continue-on-error: true
+    - name: Build Astro site
+      run: |
+        cd kelasku-astro
+        npm run build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
+        publish_dir: ./kelasku-astro/dist
         publish_branch: gh-pages
         force_orphan: true
