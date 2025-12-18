@@ -1,0 +1,22 @@
+{
+  "name": "kelasku",
+  "version": "1.0.0",
+  "description": "Web aplikasi untuk kelas malam - tempat kritik saran, tugas dan laporan kas",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "kelas",
+    "education",
+    "management",
+    "anonymous-feedback",
+    "assignments",
+    "finance",
+    "transparency"
+  ],
+  "author": "Kelas Malam",
+  "license": "MIT"
+}

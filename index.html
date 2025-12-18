@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KelasKu - Kelas Malam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>KelasKu</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#suggestions">Kritik & Saran</a></li>
+                    <li><a href="#assignments">Tugas</a></li>
+                    <li><a href="#finance">Laporan Kas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="container">
+            <h2>Selamat Datang di KelasKu</h2>
+            <p>Platform untuk meningkatkan komunikasi dan transparansi dalam kelas malam kami.</p>
+        </section>
+
+        <section id="suggestions" class="container">
+            <h2>Kritik & Saran</h2>
+            <p>Tulis saran atau kritik kamu secara anonim:</p>
+            <form id="suggestionForm">
+                <textarea id="suggestionText" placeholder="Tulis saran atau kritikmu disini..." rows="4"></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+            <div id="suggestionsList"></div>
+        </section>
+
+        <section id="assignments" class="container">
+            <h2>Tugas</h2>
+            <p>Tambahkan tugas baru:</p>
+            <form id="assignmentForm">
+                <input type="text" id="assignmentName" placeholder="Nama Tugas" required>
+                <input type="date" id="assignmentDeadline" required>
+                <button type="submit">Tambah Tugas</button>
+            </form>
+            
+            <div id="assignmentsList">
+                <h3>Daftar Tugas:</h3>
+                <ul id="assignmentItems"></ul>
+            </div>
+        </section>
+
+        <section id="finance" class="container">
+            <h2>Laporan Kas</h2>
+            <p>Upload file untuk melacak pengeluaran kelas:</p>
+            <form id="financeForm">
+                <input type="file" id="financeFile" accept=".csv,.xlsx,.xls,.pdf,.jpg,.png" required>
+                <button type="submit">Upload File</button>
+            </form>
+            
+            <div id="financeRecords">
+                <h3>Riwayat Pengeluaran:</h3>
+                <ul id="financeItems"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kelas Malam. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
