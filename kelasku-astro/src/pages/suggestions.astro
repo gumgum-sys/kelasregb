@@ -4,11 +4,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Kritik & Saran - KelasKu" description="Kirimkan kritik dan saran secara anonim untuk perbaikan kelas.">
     <section class="container">
-        <h2>Kritik & Saran</h2>
+        <h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            Kritik & Saran
+        </h2>
         <p>Tulis saran atau kritik kamu secara anonim:</p>
         <form id="suggestionForm">
             <textarea id="suggestionText" placeholder="Tulis saran atau kritikmu disini..." rows="4"></textarea>
-            <button type="submit">Kirim</button>
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Kirim
+            </button>
         </form>
         <div id="suggestionsList"></div>
     </section>
